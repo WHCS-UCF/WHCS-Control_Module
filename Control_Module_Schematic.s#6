@@ -8422,7 +8422,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0">
+<class number="0" name="default" width="0.254" drill="0">
 </class>
 </classes>
 <parts>
@@ -8521,7 +8521,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="U$1" gate="G$1" x="-40.64" y="60.96"/>
 <instance part="C7" gate="G$1" x="-50.8" y="55.88" rot="R180"/>
 <instance part="C8" gate="G$1" x="-10.16" y="53.34" rot="R180"/>
-<instance part="JP3" gate="G$1" x="55.88" y="12.7" rot="R180"/>
+<instance part="JP3" gate="G$1" x="55.88" y="12.7" rot="MR0"/>
 </instances>
 <busses>
 </busses>
@@ -8791,9 +8791,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="N$11" class="0">
 <segment>
 <pinref part="SSR" gate="G$1" pin="T2"/>
-<wire x1="25.4" y1="10.16" x2="25.4" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="17.78" x2="25.4" y2="10.16" width="0.1524" layer="91"/>
+<pinref part="JP3" gate="G$1" pin="1"/>
 <wire x1="25.4" y1="10.16" x2="48.26" y2="10.16" width="0.1524" layer="91"/>
-<pinref part="JP3" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="N$14" class="0">
@@ -8938,10 +8938,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </net>
 <net name="N$10" class="0">
 <segment>
+<pinref part="JP3" gate="G$1" pin="3"/>
+<wire x1="48.26" y1="15.24" x2="30.48" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="SSR" gate="G$1" pin="T1"/>
-<wire x1="30.48" y1="17.78" x2="30.48" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="15.24" x2="48.26" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="JP3" gate="G$1" pin="1"/>
+<wire x1="30.48" y1="15.24" x2="30.48" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
