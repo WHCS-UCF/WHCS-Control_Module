@@ -145,8 +145,6 @@
 <text x="4.699" y="43.053" size="2.54" layer="21">WHCS</text>
 <text x="15.748" y="43.434" size="1.778" layer="21">Control Module V1.0</text>
 <text x="49.4538" y="36.3347" size="1.778" layer="21" rot="R90">120V AC</text>
-<text x="6.35" y="52.07" size="1.778" layer="51">Test points.
-solid state relay considerations.</text>
 </plain>
 <libraries>
 <library name="led">
@@ -223,6 +221,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pad name="P$1" x="-7.5" y="1.05" drill="1.1" diameter="2.032"/>
 <pad name="P$3" x="5.05" y="1.05" drill="1.1" diameter="2.032"/>
 <pad name="P$4" x="7.59" y="1.05" drill="1.1" diameter="2.032"/>
+</package>
+<package name="DUMMY">
+<description>NOTHING HERE!!! For when you want a symbol with no package as an option against symbols with a package.</description>
 </package>
 </packages>
 </library>
@@ -1890,6 +1891,10 @@ Please make sure your boards conform to these design rules.</description>
 <element name="JP4" library="SparkFun-Connectors" package="1X10_LOCK_LONGPADS" value="" x="17.4117" y="40.7416" smashed="yes">
 <attribute name="VALUE" x="16.1417" y="37.5666" size="1.27" layer="27" font="vector"/>
 </element>
+<element name="FRAME1" library="WHCS" package="DUMMY" value="FRAME-LETTERNO_PACKAGE" x="0" y="-1.27">
+<attribute name="VERSION" value="v01" x="0" y="-1.27" size="1.778" layer="27" display="off"/>
+<attribute name="DESIGNER" value="Nobody" x="0" y="-1.27" size="1.778" layer="27" display="off"/>
+</element>
 </elements>
 <signals>
 <signal name="N$2">
@@ -2404,10 +2409,10 @@ Please make sure your boards conform to these design rules.</description>
 <signal name="PC2">
 <contactref element="JP4" pad="2"/>
 <contactref element="U2" pad="25"/>
-<wire x1="37.1856" y1="25.6032" x2="37.1856" y2="24.7904" width="0.254" layer="1"/>
-<wire x1="37.3888" y1="27.3304" x2="37.1856" y2="25.6032" width="0.254" layer="1"/>
-<wire x1="37.1856" y1="25.8064" x2="37.3888" y2="27.3304" width="0.254" layer="16"/>
-<wire x1="36.9824" y1="25.6032" x2="37.1856" y2="25.8064" width="0.254" layer="16"/>
+<wire x1="37.5666" y1="25.8572" x2="37.1856" y2="24.7904" width="0.254" layer="1"/>
+<wire x1="37.3888" y1="27.3304" x2="37.5666" y2="25.8572" width="0.254" layer="1"/>
+<wire x1="37.5666" y1="25.8064" x2="37.3888" y2="27.3304" width="0.254" layer="16"/>
+<wire x1="36.9824" y1="25.6032" x2="37.5666" y2="25.8064" width="0.254" layer="16"/>
 <wire x1="36.576" y1="25.6032" x2="36.9824" y2="25.6032" width="0.254" layer="16"/>
 <wire x1="29.2608" y1="32.9184" x2="36.576" y2="25.6032" width="0.254" layer="16"/>
 <wire x1="29.2608" y1="33.1216" x2="29.2608" y2="32.9184" width="0.254" layer="16"/>
@@ -2539,10 +2544,4 @@ Please make sure your boards conform to these design rules.</description>
 </signals>
 </board>
 </drawing>
-<compatibility>
-<note version="6.3" minversion="6.2.2" severity="warning">
-Since Version 6.2.2 text objects can contain more than one line,
-which will not be processed correctly with this version.
-</note>
-</compatibility>
 </eagle>

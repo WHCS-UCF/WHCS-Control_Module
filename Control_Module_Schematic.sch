@@ -8767,6 +8767,14 @@ Source: www.kingbright.com</description>
 <pad name="3" x="6.36" y="0" drill="1.1" diameter="2.032"/>
 <pad name="4" x="8.9" y="0" drill="1.1" diameter="2.032"/>
 </package>
+<package name="CREATIVE_COMMONS">
+<text x="-20.32" y="5.08" size="1.778" layer="51" font="vector">Released under the Creative Commons Attribution Share-Alike 4.0 License</text>
+<text x="0" y="2.54" size="1.778" layer="51" font="vector"> https://creativecommons.org/licenses/by-sa/4.0/</text>
+<text x="11.43" y="0" size="1.778" layer="51" font="vector">Designed by:</text>
+</package>
+<package name="DUMMY">
+<description>NOTHING HERE!!! For when you want a symbol with no package as an option against symbols with a package.</description>
+</package>
 </packages>
 <symbols>
 <symbol name="Q">
@@ -8798,6 +8806,7 @@ Source: www.kingbright.com</description>
 <text x="-8.128" y="-5.08" size="1.016" layer="94">control-</text>
 <text x="3.302" y="3.81" size="1.016" layer="94">load+</text>
 <text x="3.302" y="-5.08" size="1.016" layer="94">load-</text>
+<text x="-6.35" y="5.334" size="1.27" layer="94">&gt;VALUE</text>
 </symbol>
 <symbol name="RELAY-SOLIDSTATE">
 <wire x1="-10.16" y1="5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
@@ -8850,6 +8859,38 @@ Source: www.kingbright.com</description>
 <vertex x="0.127" y="0.381"/>
 <vertex x="0.635" y="0.889"/>
 </polygon>
+</symbol>
+<symbol name="LETTER_L">
+<wire x1="0" y1="154.94" x2="248.92" y2="154.94" width="0.4064" layer="94"/>
+<wire x1="248.92" y1="154.94" x2="248.92" y2="0" width="0.4064" layer="94"/>
+<wire x1="0" y1="154.94" x2="0" y2="0" width="0.4064" layer="94"/>
+<wire x1="0" y1="0" x2="248.92" y2="0" width="0.4064" layer="94"/>
+</symbol>
+<symbol name="DOCFIELD">
+<wire x1="0" y1="0" x2="71.12" y2="0" width="0.254" layer="94"/>
+<wire x1="101.6" y1="15.24" x2="87.63" y2="15.24" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="5.08" x2="71.12" y2="5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="5.08" x2="0" y2="15.24" width="0.254" layer="94"/>
+<wire x1="101.6" y1="15.24" x2="101.6" y2="5.08" width="0.254" layer="94"/>
+<wire x1="71.12" y1="5.08" x2="71.12" y2="0" width="0.254" layer="94"/>
+<wire x1="71.12" y1="5.08" x2="87.63" y2="5.08" width="0.254" layer="94"/>
+<wire x1="71.12" y1="0" x2="101.6" y2="0" width="0.254" layer="94"/>
+<wire x1="87.63" y1="15.24" x2="87.63" y2="5.08" width="0.254" layer="94"/>
+<wire x1="87.63" y1="15.24" x2="0" y2="15.24" width="0.254" layer="94"/>
+<wire x1="87.63" y1="5.08" x2="101.6" y2="5.08" width="0.254" layer="94"/>
+<wire x1="101.6" y1="5.08" x2="101.6" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="15.24" x2="0" y2="22.86" width="0.254" layer="94"/>
+<wire x1="0" y1="22.86" x2="101.6" y2="22.86" width="0.254" layer="94"/>
+<wire x1="101.6" y1="22.86" x2="101.6" y2="15.24" width="0.254" layer="94"/>
+<text x="1.27" y="1.27" size="2.54" layer="94" font="vector">Date:</text>
+<text x="12.7" y="1.27" size="2.54" layer="94" font="vector">&gt;LAST_DATE_TIME</text>
+<text x="72.39" y="1.27" size="2.54" layer="94" font="vector">Sheet:</text>
+<text x="86.36" y="1.27" size="2.54" layer="94" font="vector">&gt;SHEET</text>
+<text x="88.9" y="11.43" size="2.54" layer="94" font="vector">REV:</text>
+<text x="1.524" y="17.78" size="2.54" layer="94" font="vector">TITLE:</text>
+<text x="15.494" y="17.78" size="2.7432" layer="94" font="vector">&gt;DRAWING_NAME</text>
+<text x="1.27" y="11.43" size="2.54" layer="94">Design by:</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -8913,6 +8954,29 @@ Source: www.kingbright.com</description>
 </connects>
 <technologies>
 <technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FRAME-LETTER" prefix="FRAME">
+<description>&lt;b&gt;Schematic Frame&lt;/b&gt;&lt;p&gt;
+Standard 8.5x11 US Letter frame</description>
+<gates>
+<gate name="G$1" symbol="LETTER_L" x="0" y="0"/>
+<gate name="V" symbol="DOCFIELD" x="147.32" y="0" addlevel="must"/>
+</gates>
+<devices>
+<device name="" package="CREATIVE_COMMONS">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="NO_PACKAGE" package="DUMMY">
+<technologies>
+<technology name="">
+<attribute name="DESIGNER" value="Nobody" constant="no"/>
+<attribute name="VERSION" value="v01" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -9035,6 +9099,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="C8" library="SparkFun-Capacitors" deviceset="1UF-25V-10%(0805)" device="&quot;" value="10uF"/>
 <part name="JP3" library="SparkFun-Connectors" deviceset="M03" device="-SCREW-5MM"/>
 <part name="JP4" library="SparkFun-Connectors" deviceset="M10" device="LOCK_LONGPADS"/>
+<part name="FRAME1" library="WHCS" deviceset="FRAME-LETTER" device="NO_PACKAGE"/>
 </parts>
 <sheets>
 <sheet>
@@ -9054,7 +9119,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="82.042" y="-25.908" size="1.778" layer="91">GND</text>
 <text x="20.32" y="-33.02" size="1.778" layer="91">3.3V</text>
 <text x="60.96" y="-30.48" size="1.778" layer="91">INDICATOR LED</text>
-<text x="18.542" y="-54.102" size="1.778" layer="94">WHCS Control Module Schematic</text>
 <text x="-87.122" y="52.578" size="1.778" layer="91">3.3V</text>
 <text x="43.688" y="23.622" size="1.778" layer="91">GND</text>
 <text x="-84.836" y="49.276" size="1.778" layer="91">5V</text>
@@ -9079,6 +9143,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="71.374" y="45.212" size="1.778" layer="91">PD5</text>
 <text x="71.374" y="42.418" size="1.778" layer="91">PD6</text>
 <text x="71.374" y="40.132" size="1.778" layer="91">PD7</text>
+<text x="24.892" y="-57.15" size="1.778" layer="91">WHCS_UCF_2015_SUMMER_GROUP5</text>
 </plain>
 <instances>
 <instance part="JP1" gate="G$1" x="78.74" y="-2.54"/>
@@ -9112,6 +9177,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="C8" gate="G$1" x="-10.16" y="53.34" rot="R180"/>
 <instance part="JP3" gate="G$1" x="55.88" y="12.7" rot="MR0"/>
 <instance part="JP4" gate="G$1" x="88.9" y="45.72" rot="R180"/>
+<instance part="FRAME1" gate="G$1" x="-121.92" y="-71.12"/>
+<instance part="FRAME1" gate="V" x="5.08" y="-68.58"/>
 </instances>
 <busses>
 </busses>
