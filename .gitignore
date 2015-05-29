@@ -13,3 +13,8 @@ desktop.ini
 *.dri
 New Text Document.txt
 control_module_gerbers.zip
+*.b#*
+*.s#*
+*.txt
+*.pdf
+*.pro
