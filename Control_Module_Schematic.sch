@@ -9400,6 +9400,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-10.16" y1="48.26" x2="-10.16" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="-10.16" y1="45.72" x2="-40.64" y2="45.72" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="FTDI232" gate="G$1" pin="6"/>
+<wire x1="73.66" y1="17.78" x2="73.66" y2="15.24" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$5" class="0">
 <segment>
