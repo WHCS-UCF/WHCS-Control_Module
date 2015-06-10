@@ -8727,8 +8727,8 @@ Source: www.kingbright.com</description>
 <wire x1="-2.5" y1="-1.6" x2="2.5" y2="-1.6" width="0.127" layer="51"/>
 <wire x1="2.5" y1="-1.6" x2="2.5" y2="1.6" width="0.127" layer="51"/>
 <wire x1="2.5" y1="1.6" x2="-2.5" y2="1.6" width="0.127" layer="51"/>
-<smd name="P$2" x="1.85" y="0" dx="2.3" dy="1.6" layer="1" rot="R90"/>
-<smd name="P$1" x="-1.85" y="0" dx="2.3" dy="1.6" layer="1" rot="R90"/>
+<smd name="P$2" x="2" y="0" dx="2.3" dy="1.9" layer="1" rot="R90"/>
+<smd name="P$1" x="-2" y="0" dx="2.3" dy="1.9" layer="1" rot="R90"/>
 </package>
 <package name="CPC1002N">
 <wire x1="-2.0447" y1="1.905" x2="-2.0447" y2="-1.905" width="0.127" layer="51"/>
