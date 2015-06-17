@@ -8775,6 +8775,20 @@ Source: www.kingbright.com</description>
 <package name="DUMMY">
 <description>NOTHING HERE!!! For when you want a symbol with no package as an option against symbols with a package.</description>
 </package>
+<package name="TAC_SWITCH_GULL_WING">
+<wire x1="-3" y1="3" x2="3" y2="3" width="0.127" layer="21"/>
+<wire x1="3" y1="3" x2="3" y2="-3" width="0.127" layer="21"/>
+<wire x1="3" y1="-3" x2="-3" y2="-3" width="0.127" layer="21"/>
+<wire x1="-3" y1="-3" x2="-3" y2="3" width="0.127" layer="21"/>
+<smd name="P$1" x="-2.25" y="4.75" dx="2.5" dy="1.65" layer="1" rot="R90"/>
+<smd name="P$3" x="2.25" y="4.75" dx="2.5" dy="1.65" layer="1" rot="R90"/>
+<smd name="P$4" x="2.25" y="-4.75" dx="2.5" dy="1.65" layer="1" rot="R90"/>
+<smd name="P$2" x="-2.25" y="-4.75" dx="2.5" dy="1.65" layer="1" rot="R90"/>
+<rectangle x1="-2.72" y1="2.45" x2="-1.72" y2="4.45" layer="51"/>
+<rectangle x1="1.82" y1="2.39" x2="2.82" y2="4.39" layer="51"/>
+<rectangle x1="-2.68" y1="-4" x2="-1.68" y2="-2" layer="51"/>
+<rectangle x1="1.67" y1="-4.26" x2="2.67" y2="-2.26" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="Q">
@@ -8892,6 +8906,17 @@ Source: www.kingbright.com</description>
 <text x="15.494" y="17.78" size="2.7432" layer="94" font="vector">&gt;DRAWING_NAME</text>
 <text x="1.27" y="11.43" size="2.54" layer="94">Design by:</text>
 </symbol>
+<symbol name="TACTILE_SWITCH">
+<wire x1="-5.08" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
+<pin name="P$1" x="-2.54" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="P$3" x="2.54" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="P$4" x="2.54" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="P$2" x="-2.54" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<text x="-8.128" y="3.048" size="1.27" layer="95">&gt;NAME</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="NDK-NX5032GA">
@@ -8977,6 +9002,24 @@ Standard 8.5x11 US Letter frame</description>
 <attribute name="DESIGNER" value="Nobody" constant="no"/>
 <attribute name="VERSION" value="v01" constant="no"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TACTILE_SWITCH">
+<gates>
+<gate name="G$1" symbol="TACTILE_SWITCH" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TAC_SWITCH_GULL_WING">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="P$3" pad="P$3"/>
+<connect gate="G$1" pin="P$4" pad="P$4"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -9100,6 +9143,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="JP3" library="SparkFun-Connectors" deviceset="M03" device="-SCREW-5MM"/>
 <part name="JP4" library="SparkFun-Connectors" deviceset="M10" device="LOCK_LONGPADS"/>
 <part name="FRAME1" library="WHCS" deviceset="FRAME-LETTER" device="NO_PACKAGE"/>
+<part name="TAC_SWITCH" library="WHCS" deviceset="TACTILE_SWITCH" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9179,6 +9223,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="JP4" gate="G$1" x="88.9" y="45.72" rot="R180"/>
 <instance part="FRAME1" gate="G$1" x="-121.92" y="-71.12"/>
 <instance part="FRAME1" gate="V" x="5.08" y="-68.58"/>
+<instance part="TAC_SWITCH" gate="G$1" x="-96.52" y="55.88"/>
 </instances>
 <busses>
 </busses>
@@ -9385,11 +9430,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-73.66" y1="55.88" x2="-81.28" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="-93.98" y1="38.1" x2="-93.98" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="-93.98" y1="33.02" x2="-101.6" y2="33.02" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="U$1" gate="G$1" pin="GND"/>
 <wire x1="-40.64" y1="53.34" x2="-40.64" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="C7" gate="G$1" pin="1"/>
@@ -9403,6 +9443,19 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="FTDI232" gate="G$1" pin="6"/>
 <wire x1="73.66" y1="17.78" x2="73.66" y2="15.24" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="-93.98" y1="33.02" x2="-101.6" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="-93.98" y1="38.1" x2="-93.98" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="-101.6" y1="27.94" x2="-101.6" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="-101.6" y1="33.02" x2="-106.68" y2="33.02" width="0.1524" layer="91"/>
+<junction x="-101.6" y="33.02"/>
+<wire x1="-106.68" y1="33.02" x2="-106.68" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="-106.68" y1="38.1" x2="-101.6" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="-101.6" y1="38.1" x2="-101.6" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="TAC_SWITCH" gate="G$1" pin="P$2"/>
+<wire x1="-101.6" y1="50.8" x2="-99.06" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -9557,7 +9610,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="N$24" class="0">
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
-<wire x1="-88.9" y1="45.72" x2="-93.98" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="-88.9" y1="40.64" x2="-88.9" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="U2" gate="U$1" pin="PC6(/RESET)"/>
 <wire x1="-53.34" y1="25.4" x2="-55.88" y2="25.4" width="0.1524" layer="91"/>
@@ -9574,6 +9626,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="71.12" y1="-5.08" x2="63.5" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="-5.08" x2="63.5" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="53.34" x2="63.5" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="-88.9" y1="45.72" x2="-91.44" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="TAC_SWITCH" gate="G$1" pin="P$4"/>
+<wire x1="-91.44" y1="45.72" x2="-93.98" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="-93.98" y1="50.8" x2="-93.98" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-93.98" y1="48.26" x2="-91.44" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-91.44" y1="48.26" x2="-91.44" y2="45.72" width="0.1524" layer="91"/>
+<junction x="-91.44" y="45.72"/>
 </segment>
 </net>
 <net name="N$10" class="0">
